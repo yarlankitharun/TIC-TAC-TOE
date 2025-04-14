@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Tic-Tac-Toe</h1>
+
+  <div class="scoreboard">
+    <p>Player X: <span id="scoreX">0</span></p>
+    <p>Player O: <span id="scoreO">0</span></p>
+  </div>
+
+  <div class="mode-select">
+    <p>Select Mode:</p>
+    <button onclick="selectMode('pvp')">Player vs Player</button>
+    <button onclick="selectMode('cpu')">Player vs Computer</button>
+  </div>
+
+  <div id="difficultySelect" style="display: none;">
+    <p>Select Difficulty:</p>
+    <button onclick="setDifficulty('easy')">Easy</button>
+    <button onclick="setDifficulty('hard')">Hard</button>
+  </div>
+
+  <div id="status">Choose Mode to Start</div>
+
+  <div class="game" id="gameBoard">
+    <div class="cell" data-index="0"></div>
+    <div class="cell" data-index="1"></div>
+    <div class="cell" data-index="2"></div>
+    <div class="cell" data-index="3"></div>
+    <div class="cell" data-index="4"></div>
+    <div class="cell" data-index="5"></div>
+    <div class="cell" data-index="6"></div>
+    <div class="cell" data-index="7"></div>
+    <div class="cell" data-index="8"></div>
+  </div>
+
+  <div class="controls">
+    <button onclick="restartGame()">Restart Game</button>
+    <button onclick="resetScore()">Reset Score</button>
+  </div>
+
+  <audio id="clickSound" src="click.mp3"></audio>
+  <audio id="winSound" src="win.mp3"></audio>
+  <audio id="loseSound" src="lose.mp3"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
